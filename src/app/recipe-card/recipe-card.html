@@ -1,0 +1,13 @@
+<div class="recipe-card">
+  <div class="recipe-image">
+    <img [src]="recipe.image" [alt]="recipe.title">
+  </div>
+  <div class="recipe-content">
+    <h3 class="recipe-title">{{ recipe.title }}</h3>
+    <p class="recipe-description">{{ recipe.description }}</p>
+    <div class="recipe-meta">
+      <span class="prep-time">⏱️ {{ recipe.prepTime }}</span>
+      <span class="difficulty">📊 {{ recipe.difficulty }}</span>
+    </div>
+  </div>
+</div>
