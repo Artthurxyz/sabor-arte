@@ -1,1 +1,12 @@
-<p>recipe-list works!</p>
+<section class="carousel-section">
+  <h2 class="carousel-title">{{ title }}</h2>
+  
+  <div class="carousel-track">
+    @for (recipe of getDisplayedRecipes(); track recipe.id) {
+      <div class="carousel-item">
+        <app-recipe-card [recipe]="recipe"></app-recipe-card>
+      </div>
+    }
+  </div>
+</section>
+

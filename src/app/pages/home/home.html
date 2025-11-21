@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<main class="main-content">
+  <section class="welcome-banner">
+    <h2>{{ getGreetingMessage() }}</h2>
+    <p>{{ getSubMessage() }}</p>
+  </section>
+
+  <section class="recipes-section">
+    <app-recipe-list [limit]="3" [search]="searchTerm" [title]="'Receitas em Destaque'" [excludeIds]="[3]"></app-recipe-list>
+  </section>
+</main>
+
+<app-footer></app-footer>

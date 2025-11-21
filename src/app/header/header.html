@@ -1,1 +1,25 @@
-<p>header works!</p>
+<header>
+  <h1>Sabor & Arte</h1>
+  
+  <div class="search-container">
+    <input 
+      type="text" 
+      placeholder="Buscar receitas..." 
+      class="search-input"
+      (keyup.enter)="onSearch($event)"
+      (input)="onSearch($event)">
+    <button class="search-button">Buscar</button>
+  </div>
+  
+  <div class="header-actions">
+    <app-notifications></app-notifications>
+    
+    <nav>
+      <a routerLink="/">Home</a>
+      <a routerLink="/receitas">Receitas</a>
+      <a routerLink="/adicionar-receita">Adicionar</a>
+      <a routerLink="/feedback">Feedback</a>
+      <a routerLink="/login" class="login-link">Entrar</a>
+    </nav>
+  </div>
+</header>

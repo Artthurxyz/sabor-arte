@@ -2,12 +2,28 @@
   <div class="recipe-image">
     <img [src]="recipe.image" [alt]="recipe.title">
   </div>
-  <div class="recipe-content">
-    <h3 class="recipe-title">{{ recipe.title }}</h3>
-    <p class="recipe-description">{{ recipe.description }}</p>
-    <div class="recipe-meta">
-      <span class="prep-time">⏱️ {{ recipe.prepTime }}</span>
-      <span class="difficulty">📊 {{ recipe.difficulty }}</span>
-    </div>
+  
+  <h3>{{ recipe.title }}</h3>
+  <p>{{ recipe.description }}</p>
+  
+  <div class="recipe-meta">
+    <span>{{ recipe.prepTime }}</span>
+    <span>{{ recipe.difficulty }}</span>
+  </div>
+  
+  <button (click)="toggleDetails()">
+    {{ showDetails ? 'Ocultar' : 'Ver Receita' }}
+  </button>
+  
+  <div *ngIf="showDetails">
+    <h4>Ingredientes</h4>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+    </ul>
+    
+    <h4>Modo de Preparo</h4>
+    <ol>
+      <li *ngFor="let step of recipe.steps">{{ step }}</li>
+    </ol>
   </div>
 </div>

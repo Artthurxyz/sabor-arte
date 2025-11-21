@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Recipe {
   id: number;
@@ -7,14 +8,21 @@ interface Recipe {
   image: string;
   prepTime: string;
   difficulty: string;
+  ingredients: string[];
+  steps: string[];
 }
 
 @Component({
   selector: 'app-recipe-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './recipe-card.html',
   styleUrl: './recipe-card.css',
 })
 export class RecipeCard {
   @Input() recipe!: Recipe;
+  showDetails = false;
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }

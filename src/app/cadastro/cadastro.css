@@ -1,0 +1,22 @@
+@import '../login/login.css';
+
+.welcome-message {
+  background: #ff6600;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.welcome-message h2 {
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.welcome-text {
+  color: white;
+  margin: 0;
+  font-size: 0.95rem;
+}

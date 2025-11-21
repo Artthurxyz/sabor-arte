@@ -1,0 +1,69 @@
+<div class="feedback-page">
+  <app-header></app-header>
+  
+  <main class="main-content">
+    <div class="form-container">
+      <h1>Enviar Feedback</h1>
+      <p>Sua opinião é muito importante para nós!</p>
+      
+      <div *ngIf="!feedbackSent">
+        <form (ngSubmit)="onSubmit()" class="feedback-form">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input 
+              type="text" 
+              id="name" 
+              [(ngModel)]="name"
+              name="name"
+              placeholder="Seu nome"
+              required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input 
+              type="email" 
+              id="email" 
+              [(ngModel)]="email"
+              name="email"
+              placeholder="seu@email.com"
+              required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <select id="subject" [(ngModel)]="subject" name="subject" required>
+              <option value="">Selecione um assunto</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="elogio">Elogio</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="duvida">Dúvida</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea 
+              id="message" 
+              [(ngModel)]="message"
+              name="message"
+              placeholder="Escreva sua mensagem aqui..."
+              rows="6"
+              required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary">Enviar Feedback</button>
+        </form>
+      </div>
+      
+      <div *ngIf="feedbackSent" class="success-message">
+        <h2>Feedback Enviado!</h2>
+        <p>Obrigado pelo seu feedback. Vamos analisar e responder em breve!</p>
+        <button (click)="resetForm()" class="btn-primary">Enviar Outro Feedback</button>
+      </div>
+    </div>
+  </main>
+  
+  <app-footer></app-footer>
+</div>
