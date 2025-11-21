@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService, User } from '../../services/data.service';
 import { RecipeList } from '../../recipe-list/recipe-list';
-import { Header } from '../../header/header';
-import { Footer } from '../../footer/footer';
+import { Header } from '../../components/header/header';
+import { Footer } from '../../components/footer/footer';
 
 
 @Component({
