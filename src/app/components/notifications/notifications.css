@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 .notification-bell {
   background: white;
   color: #ff6600;

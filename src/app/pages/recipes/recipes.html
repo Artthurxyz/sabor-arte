@@ -1,0 +1,29 @@
+<div class="recipes-page">
+  <app-header></app-header>
+  
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Todas as Receitas</h1>
+    </div>
+    
+    <div class="recipes-content">
+      <aside class="category-sidebar">
+        <h3>Categorias</h3>
+        <div class="category-filter">
+          <button 
+            *ngFor="let cat of categories" 
+            class="category-btn"
+            [class.active]="selectedCategory === cat.value"
+            (click)="selectCategory(cat.value)">
+            {{ cat.name }}
+          </button>
+        </div>
+      </aside>
+      <section class="recipes-list-section">
+        <app-recipe-list [category]="selectedCategory" [search]="searchTerm" [title]="''"></app-recipe-list>
+      </section>
+    </div>
+  </main>
+  
+  <app-footer></app-footer>
+</div>

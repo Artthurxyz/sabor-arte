@@ -1,6 +1,6 @@
 import { Component, Input, signal, computed, HostListener, OnInit } from '@angular/core';
 import { RecipeCard } from '../recipe-card/recipe-card';
-import { DataService, Recipe } from '../services/data.service';
+import { DataService, Recipe } from '../../services/data.service';
 
 interface RecipeLocal {
   id: number;
@@ -79,28 +79,6 @@ export class RecipeList implements OnInit {
       ]
     },
     {
-      id: 3,
-      title: 'Brigadeiro',
-      description: 'Doce brasileiro clássico',
-      image: 'https://atelierdossabores.com.br/zona-sul/wp-content/uploads/sites/6/2020/01/DOCINHO-BRIGADEIRO-GOURMET-ATELIER-DOS-SABORES.jpg',
-      prepTime: '30 min',
-      difficulty: 'Fácil',
-      category: 'Doces',
-      ingredients: [
-        '1 lata de leite condensado',
-        '1 colher de sopa de manteiga',
-        '3 colheres de sopa de chocolate em pó',
-        'Chocolate granulado'
-      ],
-      steps: [
-        'Misture tudo em uma panela',
-        'Cozinhe em fogo baixo mexendo sempre',
-        'Quando desgrudar do fundo está pronto',
-        'Deixe esfriar',
-        'Faça bolinhas e passe no granulado'
-      ]
-    },
-    {
       id: 4,
       title: 'Coxinha de Frango',
       description: 'Salgado tradicional brasileiro',
@@ -123,31 +101,6 @@ export class RecipeList implements OnInit {
         'Modele as coxinhas com o recheio',
         'Passe na farinha de rosca',
         'Frite em óleo quente'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Pão de Queijo',
-      description: 'Quitute mineiro irresistível',
-      image: 'https://essareceitafunciona.com.br/wp-content/uploads/2022/07/Pao-de-queijo-Essa-Receita-Funciona-9.jpg',
-      prepTime: '40 min',
-      difficulty: 'Fácil',
-      category: 'Salgados',
-      ingredients: [
-        '500g de polvilho azedo',
-        '1 xícara de leite',
-        '1/2 xícara de óleo',
-        '2 ovos',
-        '200g de queijo ralado',
-        'Sal a gosto'
-      ],
-      steps: [
-        'Ferva o leite com óleo e sal',
-        'Despeje sobre o polvilho e misture',
-        'Adicione os ovos um a um',
-        'Misture o queijo',
-        'Faça bolinhas',
-        'Asse em forno pré-aquecido a 180°C por 30 minutos'
       ]
     },
     {

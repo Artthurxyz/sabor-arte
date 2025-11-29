@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { RecipeList } from '../recipe-list/recipe-list';
-import { Header } from '../components/header/header';
-import { Footer } from '../components/footer/footer';
+import { RecipeList } from '../../components/recipe-list/recipe-list';
+import { Header } from '../../components/header/header';
+import { Footer } from '../../components/footer/footer';
 
 @Component({
   selector: 'app-recipes',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
-import { Notifications } from '../../notifications/notifications';
+import { Notifications } from '../notifications/notifications';
 
 @Component({
   selector: 'app-header',
